@@ -72,4 +72,7 @@ long count = allArtists.stream()
         return count;
     }
 
+    public static void main(String[] args) {
+
+    }
 }

@@ -7,6 +7,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import static com.insightfullogic.java8.examples.chapter1.SampleData.aLoveSupreme;
+import static com.insightfullogic.java8.examples.chapter1.SampleData.manyTrackAlbum;
 import static java.util.stream.Collectors.toList;
 import static java.util.stream.Collectors.toSet;
 
@@ -27,14 +29,39 @@ public class Decisions {
         // END origins_of_bands_meth_imp
     }
 
-    public Set<String> originsOfBands(Album album) {
+    public static Set<String> originsOfBands(Album album) {
         // BEGIN origins_of_bands
 Set<String> origins = album.getMusicians()
-                           .filter(artist -> artist.getName().startsWith("The"))
+//                           .filter(artist -> artist.getName())
+                           .filter(artist -> artist.getName().startsWith("John"))
                            .map(artist -> artist.getNationality())
                            .collect(toSet());
         // END origins_of_bands
         return origins;
+    }
+    public static Set<String> getSingers(Album album) {
+        // BEGIN origins_of_bands
+Set<String> origins = album.getMusicians()
+//                           .filter(artist -> artist.getMembers()
+//                           .filter(artist -> artist.getName().startsWith("John"))
+                           .map(artist -> artist.getName())
+//        .sorted(artist -> artist.startsWith("john"))
+                           .collect(toSet());
+        // END origins_of_bands
+        return origins;
+    }
+
+    public static void main(String[] args) {
+
+//        Set<String> c = new Set<String>;
+//        Set<String> c0 = originsOfBands(aLoveSupreme);
+//        Set<String> c1 = originsOfBands(manyTrackAlbum);
+//        System.out.println(c0);
+
+//        System.out.println(originsOfBands(manyTrackAlbum));
+//        System.out.println(getSingers(manyTrackAlbum));
+
+
     }
 
     public Set<String> originsOfBandsMisuse(Album album) {

@@ -24,7 +24,7 @@ public class HigherOrderFunctionExamplesTest {
         // BEGIN collect_to_list_1
 List<String> collected = Stream.of("a", "b", "c") // <1>
                                .collect(Collectors.toList()); // <2>
-
+        System.out.println(collected);
 assertEquals(Arrays.asList("a", "b", "c"), collected); // <3>
         // END collect_to_list_1
     }
