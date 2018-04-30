@@ -7,6 +7,9 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import static com.insightfullogic.java8.examples.chapter1.SampleData.manyTrackAlbum;
+import static com.insightfullogic.java8.examples.chapter1.SampleData.sampleShortAlbum;
+import static java.util.Arrays.asList;
 import static java.util.stream.Collectors.toSet;
 
 public class Refactor {
@@ -17,7 +20,10 @@ public class Refactor {
 
     public static class Step0 implements LongTrackFinder {
 // BEGIN findLongTracks_0
-public Set<String> findLongTracks(List<Album> albums) {
+//public static void main(String[] args) {
+//    Set<String> f = findLongTracks(List < Album > asList(manyTrackAlbum, sampleShortAlbum));
+//}
+        public Set<String> findLongTracks(List<Album> albums) {
     Set<String> trackNames = new HashSet<>();
     for(Album album : albums) {
         for (Track track : album.getTrackList()) {
@@ -30,8 +36,8 @@ public Set<String> findLongTracks(List<Album> albums) {
     return trackNames;
 }
 // END findLongTracks_0
-    }
 
+    }
     public static class Step1 implements LongTrackFinder {
 // BEGIN findLongTracks_1
 public Set<String> findLongTracks(List<Album> albums) {

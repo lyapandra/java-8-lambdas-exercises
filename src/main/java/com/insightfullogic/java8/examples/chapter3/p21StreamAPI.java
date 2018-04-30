@@ -1,5 +1,6 @@
 package com.insightfullogic.java8.examples.chapter3;
 
+import com.insightfullogic.java8.examples.chapter1.Album;
 import com.insightfullogic.java8.examples.chapter1.Track;
 
 import java.util.Comparator;
@@ -11,7 +12,7 @@ import static java.lang.Character.*;
 import static java.util.Arrays.asList;
 import static java.util.stream.Collectors.toList;
 
-public class StreamAPI {
+public class p21StreamAPI {
     public static List<String> collectToList() {
         List<String> collected = Stream.of("a", "b", "c") // <1>
                 .collect(Collectors.toList()); // <2>
