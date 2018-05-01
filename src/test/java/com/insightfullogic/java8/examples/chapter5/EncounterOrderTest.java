@@ -55,6 +55,17 @@ public class EncounterOrderTest {
     }
 
     @Test
+    public void hashSetToStreamUnsorted() {
+    Set<Integer> numbers = new HashSet<>(asList(4, 3, 2, 1));
+
+    List<Integer> sameSet = numbers.stream()
+                                     .sorted()
+                                     .collect(toList());
+
+    assertEquals(asList(1, 2, 3, 4), sameSet);
+    }
+
+    @Test
     public void toStreamMapped() {
         // BEGIN TO_STREAM_MAPPED
     List<Integer> numbers = asList(1, 2, 3, 4);

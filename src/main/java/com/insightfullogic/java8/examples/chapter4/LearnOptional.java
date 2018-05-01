@@ -2,7 +2,7 @@ package com.insightfullogic.java8.examples.chapter4;
 
 import java.util.Optional;
 
-public class learnOptional {
+public class LearnOptional {
     public static void main(String[] args) {
         Optional<String> a = Optional.of("a");
         System.out.println("a = " + a);
